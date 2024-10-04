@@ -2,14 +2,14 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Sock",
   "logo": {
-    "dark": "/images/icon.png",
-    "light": "/images/icon.png"
+    "dark": "/assets/images/icon.png",
+    "light": "/assets/images/icon.png"
   },
   "modeToggle": {
     "default": "dark",
-    "isHidden": true
+    "isHidden": false
   },
-  "favicon": "/images/icon.png",
+  "favicon": "/assets/images/icon.png",
   "colors": {
     "primary": "#9189de",
     "light": "#9189de"
@@ -35,7 +35,19 @@
     {
       "group": "Resources",
       "pages": [
-        "resources/variables"
+        "resources/variables",
+        "resources/embed"
+      ]
+    },
+    {
+      "group": "essentials",
+      "pages": [
+        "essentials/code",
+        "essentials/images",
+        "essentials/markdown",
+        "essentials/navigation",
+        "essentials/reusable-snippets",
+        "essentials/settings"
       ]
     }
   ],
