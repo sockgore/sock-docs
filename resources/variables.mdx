@@ -1,0 +1,78 @@
+---
+title: 'Variables'
+description: 'Context-provided values.'
+icon: 'signature'
+---
+
+
+## What are variables?
+Variables are placeholders that you can use in commands that expect a response, allowing Sock to automatically fill in with relevant context.
+
+For example, when a command references a specific user, you can use `{user}` to mention the referenced user directly.
+
+<Warning>
+These variables are subject to change. New variables may be added, while existing ones can be removed or renamed.
+
+We recommend going to our [support server](https://discord.gg/sock) to stay up to date.
+</Warning>
+
+## Global Variables
+<Tabs>
+    <Tab title="Server">
+        | Variable | Description |
+        |---|---|
+        | `{server}` | The server's name |
+        | `{server_membercount}` | The server's member count |
+        | `{server_membercount_ordinal}` | The ordinal version of the member count |
+        | `{server_boostcount}` | The total number of boosts the server has |
+        | `{server_boostlevel}` | The server's boost tier level |
+        | `{server_icon}` | The server's icon URL (can be `null`) |
+    </Tab>
+    <Tab title="User">
+        | Variable | Description |
+        |---|---|
+        | `{user}` | The user's @mention |
+        | `{user_id}` | The user's ID |
+        | `{user_name}` | The user's username |
+        | `{user_avatar}` | The user's avatar URL (can be `null`) |
+        | `{user_level}` | The user's current level
+        | `{user_xp}` | The user's current XP
+        | `{user_xp_total}` | The user's total XP
+        | `{user_xp_required}` | The amount of XP required for the user to level up
+    </Tab>
+    <Tab title="Miscellaneous">
+        | Variable | Usage | Description |
+        |---|---|---|
+        | `{n}` | | Adds a new line |
+        | `{embed:}` | `{embed:custom_name}` | Appends an embed to the message. To learn more about creating a custom embed, click [here](https://google.com) |
+    </Tab>
+</Tabs>
+
+## Autoresponder Variables
+<Note>
+    These variables will only work for autoresponses.
+</Note>
+<Tabs>
+<Tab title="Message">
+        | Variable | Description |
+        |---|---|
+        | `{message}` | The link to the message |
+        | `{message_id}` | The message's ID |
+        | `{message_content}` | The message's content
+    </Tab>
+    <Tab title="Functions">
+        | Variable | Usage | Description |
+        |---|---|---|
+        | `{delete}` | | Delete the triggered message |
+        | `{react:}` | `{react:😲}`<br />`{react:pog}`<br />`{react:1227999245726912616}` | React to the triggered message with an emoji |
+        | `{addrole:}` | `{addrole:muted}`<br />`{addrole:1244280225156563095}` | Adds a role to the author of the triggered message. |
+    </Tab>
+    <Tab title="Conditions">
+        | Variable | Usage | Description |
+        |---|---|---|
+        | `{in:}` | `{in:general}`<br />`{in:1226235008734466142}` | Respond if the triggered message was in a specific channel. |
+        | `{hasperm:}` | `{hasperm:Administrator}`<br />`{hasperm:BAN_MEMBERS}`<br />`{hasperm:kick members}` | Respond if the author of the message has a specific permission |
+        | `{hasfiles:n}` | `{hasfiles}`<br />`{hasfiles:2}` | Respond if the triggered message has at least `n` files attached  (`n` is 1 by default) |
+        | `{denyrole:}` | `{denyrole:muted}`<br />`{denyrole:1244280225156563095}` | Ignore if the author of the message has a specific role
+    </Tab>
+</Tabs>
