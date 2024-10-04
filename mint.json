@@ -27,7 +27,7 @@
   },
   "navigation": [
     {
-      "group": "Overview",
+      "group": "",
       "pages": [
         "introduction"
       ]
@@ -35,7 +35,7 @@
     {
       "group": "Resources",
       "pages": [
-        "/resources/variables"
+        "resources/variables"
       ]
     }
   ],
