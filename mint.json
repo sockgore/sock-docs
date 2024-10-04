@@ -38,17 +38,6 @@
         "resources/variables",
         "resources/embed"
       ]
-    },
-    {
-      "group": "essentials",
-      "pages": [
-        "essentials/code",
-        "essentials/images",
-        "essentials/markdown",
-        "essentials/navigation",
-        "essentials/reusable-snippets",
-        "essentials/settings"
-      ]
     }
   ],
   "footerSocials": {

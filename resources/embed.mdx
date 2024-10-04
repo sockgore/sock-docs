@@ -3,7 +3,7 @@ title: 'Embeds'
 description: 'Embed building made easy.'
 icon: 'network-wired'
 ---
-Embeds are styled message components that offer greater customization options than standard messages, allowing you to modify elements such as color, title, and images.
+Embeds are styled messages that offer more style compared to normal messages. This section will be going through on how to use our user-friendly command builder to easily create embeds.
 
 ## Creating an Embed
 You can use `/server embed create` to create an embed.
@@ -11,9 +11,7 @@ You can use `/server embed create` to create an embed.
 <Tip>**Did you know?** The optional parameters give you a faster method of filling out your embed.</Tip>
 The `[name]` parameter is what allows Sock to identify your embed from others. By default, names are lowercase and can't have more than 50 characters.
 
-Click on the dropdown and click any of the options to edit.
-<Info>You can use [variables](/resources/variables) to make dynamic embeds.</Info>
-<Frame> <video autoPlay muted loop width="500px" src="/assets/videos/embed-menu.mp4" /> </Frame>
-When clicking on an option, a form will prompt. Fill it out with what you want to edit in your embed. When finished, click on **Submit** and your changes will be saved.
-
-You're done! You can use `/eval content:{embed:template}` to send your embed.
+Click on the dropdown and click any of the options to edit. When clicking on an option, a form will prompt for you to fill out.
+<Frame> <video autoPlay muted loop src="/assets/videos/embed-menu.mp4" /> </Frame>
+Click on **Submit** and you're done! You can use `/eval {embed:name}` to test your embed.
+<Info> `{embed:}` is an example of a variable. Click [here](/resources/variables) to learn more about them. </Info>
