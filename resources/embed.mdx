@@ -6,15 +6,14 @@ icon: 'network-wired'
 Embeds are styled message components that offer greater customization options than standard messages, allowing you to modify elements such as color, title, and images.
 
 ## Creating an Embed
-**1.** Use `/server embed create` to create an embed.
-<Frame> <video controls className="w-full aspect-video" src="/assets/videos/embed-create.mp4" /> </Frame>
+You can use `/server embed create` to create an embed.
+<Frame> <video autoPlay muted loop src="/assets/videos/embed-create.mp4" /> </Frame>
 <Tip>**Did you know?** The optional parameters give you a faster method of filling out your embed.</Tip>
 The `[name]` parameter is what allows Sock to identify your embed from others. By default, names are lowercase and can't have more than 50 characters.
 
-**2.** Click on the dropdown and click any of the options to edit.
-<Info>For more dynamic embeds, you can use [variables](/resources/variables) in your embed.</Info>
-<Frame> <img src="/assets/images/embed-menu.png" /> </Frame>
-Selecting an option will prompt a form. When you're finished filling up the form, click on **Submit** and all your changes will be saved.
+Click on the dropdown and click any of the options to edit.
+<Info>You can use [variables](/resources/variables) to make dynamic embeds.</Info>
+<Frame> <video autoPlay muted loop width="500px" src="/assets/videos/embed-menu.mp4" /> </Frame>
+When clicking on an option, a form will prompt. Fill it out with what you want to edit in your embed. When finished, click on **Submit** and your changes will be saved.
 
-You're done! You can use `/eval` to send your embed.
-<Frame> <video controls className="w-full aspect-vido" src="/assets/videos/embed-send.mp4" /> </Frame>
+You're done! You can use `/eval content:{embed:template}` to send your embed.
