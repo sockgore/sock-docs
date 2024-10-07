@@ -1,0 +1,49 @@
+---
+title: 'Antiraid'
+description: 'Set requirements accounts need to pass in order to join your server.'
+icon: 'ban'
+---
+
+This module allows you to filter incoming accounts by setting certain conditions they must meet before gaining access to your server.
+
+## Configuration
+You can use `/antiraid settings` to configure your server's antiraid module. Click on **Enable** to enable the module. Optionally, you can enable **Notify Users** to automatically users if they were removed for triggering the Antiraid system.
+<Frame> <video autoPlay muted loop width="450px" src="/assets/videos/antiraid-settings.mp4" /> </Frame>
+
+### Avatar Requirement
+Trigger whenever an account joins the server without a profile picture.
+<Frame> <img src="/assets/images/antiraid-avatar.png" /> </Frame>
+<ResponseField name="enabled" type="boolean" required> Whether to enable or disable this requirement </ResponseField>
+<ResponseField name="action" type="Ban | Kick"> The action that will be taken when the requirement isn't matched </ResponseField>
+
+### Minimum Age Requirement
+Trigger whenever an account joins the server younger than the required age.
+<Frame> <img src="/assets/images/antiraid-account-age.png" /> </Frame>
+<ResponseField name="enabled" type="boolean" required> Whether to enable or disable this requirement </ResponseField>
+<ResponseField name="action" type="Ban | Kick"> The action that will be taken when the requirement isn't matched </ResponseField>
+<ResponseField name="threshold" type="string">
+	How old an account must be
+	
+	Example: `1d, 1 day, 24h`
+</ResponseField>
+
+### Bot Filteirng
+Trigger whenever an unwhitelisted bot joins the server
+<Frame> <img src="/assets/images/antiraid-bots.png" /> </Frame>
+<ResponseField name="enabled" type="boolean" required> Whether to enable or disable this requirement </ResponseField>
+<ResponseField name="action" type="Ban | Kick"> The action that will be taken when the requirement isn't matched </ResponseField>
+<ResponseField name="include_verified" type="boolean"> Whether to include verified discord bots, such as MEE6 or Dyno </ResponseField>
+
+## Account Whitelisting
+Whitelisting allow accounts instant access to the server without needing to follow the antiraid requirements. You can use `/antiraid settings` and navigate to **Whitelist Settings** to view all whitelisted accounts.
+<Frame> <video autoPlay muted loop width="450px" src="/assets/videos/antiraid-whitelist.mp4" /> </Frame>
+
+### Whitelisting an account
+You can whitelist an account with `/antiraid whitelist add`
+<Frame> <img src="/assets/images/antiraid-whitelist.png" /> </Frame>
+<ResponseField name="user" type="User | string" required> The user snowflake to whitelist </ResponseField>
+<ResponseField name="once" type="boolean" required>
+	Whether to whitelist once, false by default
+
+	If true, the whitelisted user will automatically be unwhitelisted when joining the server
+</ResponseField>

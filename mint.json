@@ -33,6 +33,12 @@
       ]
     },
     {
+      "group": "Security",
+      "pages": [
+        "security/antiraid"
+      ]
+    },
+    {
       "group": "Resources",
       "pages": [
         "resources/variables",
