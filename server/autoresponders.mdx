@@ -1,0 +1,45 @@
+---
+title: 'Autoresponders'
+description: 'Automatically respond to triggers with custom responses.'
+icon: 'reply'
+---
+
+<Warning>Make sure to enable the **Autoresponder** module with `/server module enable`</Warning>
+Autoresponders are powerful ways for the client to reply to triggers. This system allows you to create simple responses, to fully-fledged custom commands.
+
+## Creating an Autoresponder
+Use `/server autoresponder add` and follow the screenshot to create an autoresponse.
+<Frame> <img src="/assets/images/autoresponder-add.png" /> </Frame>
+Afterwards, try saying **Hello**. If done correctly, @stock should respond with **"Hi there!"**
+<ResponseField name="trigger" type="string" required>The message content to trigger the autoresponse</ResponseField>
+<ResponseField name="reply" type="string" required>The reply to automatically respond with after being triggered</ResponseField>
+<ResponseField name="match" type="Exact | StartsWith | EndsWith | Includes" default="Exact">
+	By default, the client only responds if your message is exactly the Autoresponder's `trigger`
+
+	For example, if the `trigger` is **Hello**, it will only trigger for any message content that is exactly **Hello**
+</ResponseField>
+
+### Dynamic Responses
+<Note>Topics from now on are slightly more advanced, and may take awhile to fully understand. If you require assistance instead, head over to our [support server](https://discord.gg/sock) so that we can assist you.</Note>
+You created an autoresponse that says **Hi there**. But, wouldn't it be cool to know who @stock is replying to? You can use variables for this exact purpose.
+
+Use `/server autoresponder edit` to edit the autoresponse, and follow the screenshot.
+<Frame> <img src="/assets/images/autoresponder-edit.png" /> </Frame>
+Afterwards, try saying **Hello** again. If done correctly, @stock should ping you. Anyone who now triggers this response will also be mentioned by @stock.
+<Info>This is an example of a variable. Click [here](/resources/variables) to learn more about them.</Info>
+
+### Input Arguments
+For this example, you will be learning how to create an autoresponse that takes in your input as values.
+Use `/server autoresponder add` and follow the screenshot.
+
+<Frame> <img src="/assets/images/autoresponder-args.png" /> </Frame>
+- This creates an autoresponse that triggers whenever `!slap` is the start of a message.
+- The **[$1]** in `reply` references the first word of the message, excluding the trigger.
+
+<Expandable title="argument examples">
+- `[$1]` references the first word
+- `[$2+]` references the second word and everything afterwards
+- `[$3-5]` references the third to the fourth word, it is the same as `[$3] [$4] [$5]`
+</Expandable>
+
+Afterwards, try saying **!slap \<@user\>** where @user is the user you want to mention. If done correctly, @stock should respond with **@you slapped @user!**
