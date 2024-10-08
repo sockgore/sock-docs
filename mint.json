@@ -21,6 +21,9 @@
       "url": "https://discord.gg/HkJcr3q5Uc"
     }
   ],
+  "primaryTab": {
+    "name": "Introduction"
+  },
   "topbarCtaButton": {
     "name": "Home",
     "url": "https://sock.bot"
@@ -37,6 +40,10 @@
       "pages": [
         "security/antiraid"
       ]
+    },
+    {
+      "group": "Server Configuration",
+      "pages": ["server/autoresponders"]
     },
     {
       "group": "Resources",
